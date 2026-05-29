@@ -69,6 +69,7 @@ app.get('/edit/:id', (req, res) => {
     // on va chercher les infos de LA todo que l'on souhaite modifier dans la base grace a son id unique
   getTodoById(db, req.params.id, (todo) => {
     // une fois qu'on l'a , on donne les infos a la vue "modifier"
+    console.log(todo)
     res.render('modifier', { todo })
 
   })
