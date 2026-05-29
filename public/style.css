@@ -1,0 +1,238 @@
+/* =========================
+   BASE
+========================= */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  background: #f4f6fb;
+  color: #111827;
+}
+
+body {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+/* =========================
+   HEADER / TITRE
+========================= */
+
+h1 {
+  font-size: 32px;
+  margin-bottom: 20px;
+  letter-spacing: -0.5px;
+}
+
+/* =========================
+   LINKS (global)
+========================= */
+
+a {
+  color: #2563eb;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* =========================
+   BUTTON BASE (CLÉ DU STYLE)
+========================= */
+
+button,
+input[type="submit"],
+a.button {
+  display: inline-block;
+  padding: 10px 14px;
+  border-radius: 10px;
+  border: none;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-decoration: none;
+}
+
+/* =========================
+   BOUTON PRINCIPAL (AJOUTER)
+========================= */
+
+a[href="/add"] {
+  display: inline-block;
+  margin-bottom: 20px;
+  background: #2563eb;
+  color: white;
+  padding: 10px 16px;
+  border-radius: 10px;
+  font-weight: 600;
+}
+
+a[href="/add"]:hover {
+  background: #1d4ed8;
+  transform: translateY(-1px);
+}
+
+/* =========================
+   TABLEAU STYLE APP
+========================= */
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+}
+
+thead {
+  background: #f3f4f6;
+  text-transform: uppercase;
+  font-size: 12px;
+  letter-spacing: 0.05em;
+  color: #6b7280;
+}
+
+th, td {
+  padding: 14px;
+  text-align: left;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+tr:hover {
+  background: #f9fafb;
+}
+
+/* =========================
+   ACTIONS BOUTONS TABLE
+========================= */
+
+td a {
+  display: inline-block;
+  padding: 6px 10px;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+/* MODIFIER */
+td a[href*="edit"] {
+  background: #e0f2fe;
+  color: #0369a1;
+}
+
+td a[href*="edit"]:hover {
+  background: #bae6fd;
+}
+
+/* SUPPRIMER */
+td a[href*="delete"] {
+  background: #fee2e2;
+  color: #b91c1c;
+}
+
+td a[href*="delete"]:hover {
+  background: #fecaca;
+}
+
+/* =========================
+   FORMULAIRES MODERNES
+========================= */
+
+form {
+  background: white;
+  padding: 24px;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+input,
+select {
+  padding: 12px;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  font-size: 14px;
+}
+
+input:focus,
+select:focus {
+  outline: none;
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37,99,235,0.15);
+}
+
+/* =========================
+   BOUTON FORM (AJOUT / UPDATE)
+========================= */
+
+form button {
+  background: #2563eb;
+  color: white;
+}
+
+form button:hover {
+  background: #1d4ed8;
+  transform: translateY(-1px);
+}
+
+/* =========================
+   RETOUR
+========================= */
+
+a[href="/"] {
+  display: inline-block;
+  margin-bottom: 15px;
+  font-weight: 600;
+  color: #374151;
+}
+
+a[href="/"]:hover {
+  color: #111827;
+}
+
+/* =========================
+   PETIT EFFET GLOBAL
+========================= */
+
+tr, button, a {
+  transition: all 0.15s ease;
+}
+
+/* =========================
+   BADGES PRIORITÉ
+========================= */
+
+.badge {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin-right: 8px;
+  vertical-align: middle;
+}
+
+/* priorité basse */
+.priority-1 {
+  background: #22c55e; /* vert */
+}
+
+/* priorité moyenne */
+.priority-2 {
+  background: #f59e0b; /* orange */
+}
+
+/* priorité haute */
+.priority-3 {
+  background: #ef4444; /* rouge */
+}

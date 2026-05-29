@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Ajouter</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <a href="/">← Retour</a>
+
+  <h1>Ajouter une tâche</h1>
+
+  <form method="POST" action="/add">
+
+    <input
+      type="text"
+      name="nom"
+      placeholder="Nom"
+      required
+    >
+
+    <input
+      type="date"
+      name="deadline"
+      required
+    >
+
+    <select name="priorite">
+
+      <option value="1">
+        Faible
+      </option>
+
+      <option value="2">
+        Moyenne
+      </option>
+
+      <option value="3">
+        Haute
+      </option>
+
+    </select>
+
+    <button>
+      Ajouter
+    </button>
+
+  </form>
+
+</body>
+
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Modifier</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <a href="/">← Retour</a>
+
+  <h1>Modifier une tâche</h1>
+
+  <form
+    method="POST"
+    action="/update/<%= todo.id %>"
+  >
+
+    <input
+      type="text"
+      name="nom"
+      value="<%= todo.nom %>"
+      required
+    >
+
+    <input
+      type="date"
+      name="deadline"
+      value="<%= todo.deadline %>"
+      required
+    >
+
+    <select name="priorite">
+
+      <option
+        value="1"
+        <%= todo.priorite == 1 ? 'selected' : '' %>
+      >
+        Faible
+      </option>
+
+      <option
+        value="2"
+        <%= todo.priorite == 2 ? 'selected' : '' %>
+      >
+        Moyenne
+      </option>
+
+      <option
+        value="3"
+        <%= todo.priorite == 3 ? 'selected' : '' %>
+      >
+        Haute
+      </option>
+
+    </select>
+
+    <button>
+      Modifier
+    </button>
+
+  </form>
+
+</body>
+
+</html>

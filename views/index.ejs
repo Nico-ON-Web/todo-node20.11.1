@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Todo List</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <h1>Mes tâches</h1>
+
+  <a href="/add">Ajouter une tâche</a>
+
+  <% if(todos.length === 0) { %>
+
+    <p>Aucune tâche</p>
+
+  <% } %>
+
+  <% if(todos.length > 0) { %>
+
+    <table>
+
+      <thead>
+        <tr>
+          <th>Nom</th>
+          <th>Deadline</th>
+          <th>Priorité</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+
+      <tbody>
+
+        <% todos.forEach(todo => { %>
+
+          <tr>
+
+            <td><%= todo.nom %></td>
+
+            <td><%= todo.deadline %></td>
+
+            <td>
+              <span class="badge priority-<%= todo.priorite %>"></span>
+              <% if(todo.priorite == 1) { %>
+                Faible
+              <% } %>
+
+              <% if(todo.priorite == 2) { %>
+                Moyenne
+              <% } %>
+
+              <% if(todo.priorite == 3) { %>
+                Haute
+              <% } %>
+
+            </td>
+
+            <td>
+              <a href="/edit/<%= todo.id %>">Modifier</a>
+
+              <a
+                href="/delete/<%= todo.id %>"
+                onclick="return confirm('Supprimer cette tâche ?')"
+              >
+                Supprimer
+              </a>
+            </td>
+
+          </tr>
+
+        <% }) %>
+
+      </tbody>
+
+    </table>
+
+  <% } %>
+
+</body>
+
+</html>
